@@ -1,0 +1,32 @@
+Source: r-cran-tidyselect
+Maintainer: Debian R Packages Maintainers <r-pkg-team@alioth-lists.debian.net>
+Uploaders: Andreas Tille <tille@debian.org>
+Section: gnu-r
+Testsuite: autopkgtest-pkg-r
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-r,
+               r-base-dev,
+               r-cran-ellipsis,
+               r-cran-glue,
+               r-cran-purrr,
+               r-cran-rlang,
+               r-cran-vctrs
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/r-pkg-team/r-cran-tidyselect
+Vcs-Git: https://salsa.debian.org/r-pkg-team/r-cran-tidyselect.git
+Homepage: https://cran.r-project.org/package=tidyselect
+Rules-Requires-Root: no
+
+Package: r-cran-tidyselect
+Architecture: any
+Depends: ${R:Depends},
+         ${shlibs:Depends},
+         ${misc:Depends}
+Recommends: ${R:Recommends}
+Suggests: ${R:Suggests}
+Description: GNU R select from a set of strings
+ GNU R backend for the selecting functions of the 'tidyverse'.
+ It makes it easy to implement select-like functions in your own
+ packages in a way that is consistent with other 'tidyverse'
+ interfaces for selection.
